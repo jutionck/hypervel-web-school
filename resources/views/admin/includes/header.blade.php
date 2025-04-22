@@ -24,6 +24,12 @@
             </div>
             <div class="col-lg-7 col-md-7 col-6">
                 <div class="header-right d-flex justify-content-end align-items-center">
+                    <div class="theme-toggle-box ml-15">
+                        <button id="theme-toggle" class="border-0 bg-transparent p-2 rounded-circle" title="Toggle Dark Mode">
+                            <i class="lni lni-night" id="theme-icon"></i>
+                            <span class="visually-hidden">Toggle Dark Mode</span>
+                        </button>
+                    </div>
                     <div class="language-box ml-15 d-none d-md-flex">
                         <button class="dropdown-toggle bg-transparent border-0" type="button" id="language" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="lni lni-world"></i>
