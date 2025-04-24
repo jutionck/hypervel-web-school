@@ -8,7 +8,7 @@ Hyper Web School adalah platform manajemen sekolah berbasis web dengan fitur len
 
 ## 🚀 Kontribusi
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ugunNet21/hypervel-web-school/blob/master/CONTRIBUTING.md)
 
 Lihat [panduan kontribusi](CONTRIBUTING.md) untuk memulai.
 
