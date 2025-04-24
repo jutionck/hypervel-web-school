@@ -21,6 +21,33 @@ Pelajari cara penggunaan melalui seri video tutorial kami:
 
 ▶️ [Tonton Playlist Lengkap](https://www.youtube.com/playlist?list=PLusb1og4k-lpv17w2wJO1z5CBXqa8FRw-)
 
+
+# 🛠 Panduan Instalasi Hyper Web School
+
+## Prasyarat
+- PHP 8.2+
+- Composer 2.5+
+- MySQL 8+
+- Node.js 18+
+- Git
+
+## 🚀 Clone & Setup Awal
+
+```bash
+# Clone repository
+git clone https://github.com/ugunNet21/hypervel-web-school.git
+cd hypervel-web-school
+
+# Install dependencies
+composer install
+npm install
+
+# Setup environment
+cp .env.example .env
+php artisan key:generate
+```
+
+
 ### Backlog Pengembangan Sidebar Navigation
 
 #### Fase 1: Core Functionality (Prioritas Tinggi)
@@ -132,6 +159,32 @@ Pelajari cara penggunaan melalui seri video tutorial kami:
   }
 }
 ```
+
+## Making
+
+```bash
+- Model
+- Migrations
+- Controller
+- Repositories
+- Request
+- Livwire
+- Middleware
+- Route
+- Modules
+
+```
+## Install package
+
+````
+- Spatie permission
+- Laravolt
+- Nwimodules
+- Laravel UI
+- Laravel Passport
+
+````
+
 
 > See [this issue](https://github.com/laravel/octane/issues/765) for more discussions.
 
