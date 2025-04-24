@@ -15,6 +15,13 @@ Lihat [panduan kontribusi](CONTRIBUTING.md) untuk memulai.
 [![Join Discussion](https://img.shields.io/badge/Discussions-Join%20Now-brightgreen)](https://github.com/ugunNet21/hypervel-web-school/discussions)
 
 
+## 📺 Video Tutorial
+
+Pelajari cara penggunaan melalui seri video tutorial kami:
+
+[![Tutorial Hyper Web School](https://img.youtube.com/vi/[VIDEO_ID]/0.jpg)](https://www.youtube.com/playlist?list=PLusb1og4k-lpv17w2wJO1z5CBXqa8FRw-)
+
+
 ### Backlog Pengembangan Sidebar Navigation
 
 #### Fase 1: Core Functionality (Prioritas Tinggi)
