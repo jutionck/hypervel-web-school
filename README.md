@@ -1,6 +1,6 @@
 ## About Apps
 
-![Tampilan Admin CMS](/images/admin-cms.png)
+![Tampilan Admin CMS](/backend/images/admin-cms.png)
 
 
 <p align="center"><a href="https://hypervel.org" target="_blank"><img src="https://hypervel.org/logo.png" width="400"></a></p>
