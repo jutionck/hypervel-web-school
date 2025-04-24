@@ -1,6 +1,10 @@
-## About Apps
+# Hyper Web School - Sistem Manajemen Sekolah Modern
 
 ![Admin CMS](public/backend/images/admin-cms.png)
+
+## Tentang Aplikasi
+
+Hyper Web School adalah platform manajemen sekolah berbasis web dengan fitur lengkap untuk administrasi, pembelajaran, dan operasional sekolah modern.
 
 
 ### Backlog Pengembangan Sidebar Navigation
@@ -87,34 +91,34 @@
     - Kursus premium
     - Sponsorship system
 
-<p align="center"><a href="https://hypervel.org" target="_blank"><img src="https://hypervel.org/logo.png" width="400"></a></p>
+## Teknologi yang Digunakan
 
-<p align="center">
-<a href="https://github.com/hypervel/hypervel/actions"><img src="https://github.com/hypervel/hypervel/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/hypervel/framework"><img src="https://img.shields.io/packagist/dt/hypervel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/hypervel/hypervel"><img src="https://img.shields.io/packagist/v/hypervel/hypervel" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/hypervel/hypervel"><img src="https://img.shields.io/packagist/l/hypervel/hypervel" alt="License"></a>
-</p>
+### Backend
+- [Hypervel Framework](https://hypervel.org) - Laravel-style PHP framework dengan coroutine support
+- PHP 8.2+
+- MySQL 8
+- Sqlite
+- Redis
 
-## Introduction
+### Frontend
+- Bootstrap 5
+- Laravel Mix
+- Vanilla JS dengan Alpine.js
 
-**Hypervel** is a Laravel-style PHP framework with native coroutine support for ultra-high performance.
+## Package Penting
 
-Hypervel ports many core components from Laravel while maintaining familiar usage patterns, making it instantly accessible to Laravel developers. The framework combines the elegant and expressive development experience of Laravel with the powerful performance benefits of coroutine-based programming. If you're a Laravel developer, you'll feel right at home with this framework, requiring minimal learning curve.
-
-This is an ideal choice for building microservices, API gateways, and high-concurrency applications where traditional PHP frameworks often encounter performance constraints.
-
-## Why Hypervel?
-
-While Laravel Octane impressively enhances your Laravel application's performance, it's crucial to understand the nature of modern web applications. In most cases, the majority of latency stems from I/O operations, such as file operations, database queries, and API requests.
-
-However, Laravel doesn't support coroutines - the entire framework is designed for a blocking I/O environment. Applications heavily dependent on I/O operations will still face performance bottlenecks. Consider this scenario:
-
-Imagine building an AI-powered chatbot where each conversation API takes 3-5 seconds to respond. With 10 workers in Laravel Octane receiving 10 concurrent requests, all workers would be blocked until these requests complete.
-
-> You can see [benchmark comparison](https://hypervel.org/docs/introduction.html#benchmark) between Laravel Octane and Hypervel
-
-Even with Laravel Octane's improvements, your application's concurrent request handling capacity remains constrained by I/O operation duration. Hypervel addresses this limitation through coroutines, enabling efficient handling of concurrent I/O operations without blocking workers. This approach significantly enhances performance and concurrency for I/O-intensive applications.
+```json
+{
+  "require": {
+    "hypervel/framework": "^0.1",
+    "ext-redis": "*"
+  },
+  "require-dev": {
+    "hyperf/testing": "~3.1.0",
+    "phpunit/phpunit": "10.5.45"
+  }
+}
+```
 
 > See [this issue](https://github.com/laravel/octane/issues/765) for more discussions.
 
