@@ -110,8 +110,7 @@ Lihat [panduan kontribusi](CONTRIBUTING.md) untuk memulai.
 
 ### Frontend
 - Bootstrap 5
-- Laravel Mix
-- Vanilla JS dengan Alpine.js
+- Javascript
 
 ## Package Penting
 
