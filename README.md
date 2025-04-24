@@ -1,6 +1,6 @@
 ## About Apps
 
-![alt text](<Screenshot from 2025-04-23 00-05-39.png>)
+![alt text](/images/admin-cms.png)
 
 <p align="center"><a href="https://hypervel.org" target="_blank"><img src="https://hypervel.org/logo.png" width="400"></a></p>
 
