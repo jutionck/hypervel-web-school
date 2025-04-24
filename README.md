@@ -6,6 +6,14 @@
 
 Hyper Web School adalah platform manajemen sekolah berbasis web dengan fitur lengkap untuk administrasi, pembelajaran, dan operasional sekolah modern.
 
+## 🚀 Kontribusi
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+Lihat [panduan kontribusi](CONTRIBUTING.md) untuk memulai.
+
+[![Join Discussion](https://img.shields.io/badge/Discussions-Join%20Now-brightgreen)](https://github.com/ugunNet21/hypervel-web-school/discussions)
+
 
 ### Backlog Pengembangan Sidebar Navigation
 
