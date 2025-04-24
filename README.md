@@ -1,6 +1,6 @@
 ## About Apps
 
-![Admin CMS](/backend/images/admin-cms.png)
+![Admin CMS](public/backend/images/admin-cms.png)
 
 
 <p align="center"><a href="https://hypervel.org" target="_blank"><img src="https://hypervel.org/logo.png" width="400"></a></p>
