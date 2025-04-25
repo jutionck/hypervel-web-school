@@ -132,6 +132,148 @@ php artisan key:generate
     - Kursus premium
     - Sponsorship system
 
+## Struktur Project
+
+```bash
+
+app/
+├── Console/
+├── Events/
+├── Exceptions/
+├── Exports/
+├── Helpers/
+├── Http/
+│ ├── Controllers/
+│ │ ├── AbstractController.php
+│ │ ├── admin/ # Controller untuk Administrasi Sistem
+│ │ ├── AIAssistant/ # Controller untuk AI Learning Assistant
+│ │ ├── Analytics/ # Controller untuk Laporan & Analytics
+│ │ ├── CareerDevelopment/ # Controller untuk Career Development
+│ │ ├── core/ # Controller untuk Core System
+│ │ ├── DigitalLibrary/ # Controller untuk Perpustakaan Digital
+│ │ ├── ELearning/ # Controller untuk E-Learning
+│ │ ├── ERaport/ # Controller untuk E-Raport & Penilaian
+│ │ ├── IndexController.php # Controller untuk Dashboard Utama
+│ │ ├── Monetization/ # Controller untuk Sistem Monetisasi
+│ │ ├── OnlineExam/ # Controller untuk Ujian Online
+│ │ ├── ParentPortal/ # Controller untuk Portal Orang Tua
+│ │ ├── PPDB/ # Controller untuk PPDB Online
+│ │ └── SchoolManagement/ # Controller untuk Manajemen Sekolah
+│ ├── Kernel.php
+│ ├── Middleware/
+│ └── Requests/
+│ ├── AIAssistant/ # Form Request untuk AI Assistant
+│ ├── Analytics/ # Form Request untuk Analytics
+│ ├── CareerDevelopment/ # Form Request untuk Career Development
+│ ├── DigitalLibrary/ # Form Request untuk Digital Library
+│ ├── ELearning/ # Form Request untuk E-Learning
+│ ├── ERaport/ # Form Request untuk E-Raport
+│ ├── Monetization/ # Form Request untuk Monetization
+│ ├── OnlineExam/ # Form Request untuk Online Exam
+│ ├── ParentPortal/ # Form Request untuk Parent Portal
+│ ├── PPDB/ # Form Request untuk PPDB
+│ └── SchoolManagement/ # Form Request untuk School Management
+├── Imports/
+├── Libraries/
+├── Listeners/
+├── Mail/
+├── Models/
+│ ├── AIAssistant/ # Model untuk AI Assistant
+│ ├── Analytics/ # Model untuk Analytics
+│ ├── CareerDevelopment/ # Model untuk Career Development
+│ ├── DigitalLibrary/ # Model untuk Digital Library
+│ ├── ELearning/ # Model untuk E-Learning
+│ ├── ERaport/ # Model untuk E-Raport
+│ ├── Monetization/ # Model untuk Monetization
+│ ├── OnlineExam/ # Model untuk Online Exam
+│ ├── ParentPortal/ # Model untuk Parent Portal
+│ ├── PPDB/ # Model untuk PPDB
+│ ├── SchoolManagement/ # Model untuk School Management
+│ ├── Model.php
+│ └── User.php
+├── Providers/
+├── Repositories/
+│ ├── AIAssistant/ # Repository untuk AI Assistant
+│ ├── Analytics/ # Repository untuk Analytics
+│ ├── CareerDevelopment/ # Repository untuk Career Development
+│ ├── DigitalLibrary/ # Repository untuk Digital Library
+│ ├── ELearning/ # Repository untuk E-Learning
+│ ├── ERaport/ # Repository untuk E-Raport
+│ ├── Monetization/ # Repository untuk Monetization
+│ ├── OnlineExam/ # Repository untuk Online Exam
+│ ├── ParentPortal/ # Repository untuk Parent Portal
+│ ├── PPDB/ # Repository untuk PPDB
+│ └── SchoolManagement/ # Repository untuk School Management
+├── Services/
+│ ├── AIAssistant/ # Service untuk AI Assistant
+│ ├── Analytics/ # Service untuk Analytics
+│ ├── CareerDevelopment/ # Service untuk Career Development
+│ ├── DigitalLibrary/ # Service untuk Digital Library
+│ ├── ELearning/ # Service untuk E-Learning
+│ ├── ERaport/ # Service untuk E-Raport
+│ ├── Monetization/ # Service untuk Monetization
+│ ├── OnlineExam/ # Service untuk Online Exam
+│ ├── ParentPortal/ # Service untuk Parent Portal
+│ ├── PPDB/ # Service untuk PPDB
+│ └── SchoolManagement/ # Service untuk School Management
+├── Traits/
+└── Utils/
+
+database/
+├── factories/
+│   ├── AIAssistant/                # Factory untuk AI Assistant
+│   ├── Analytics/                  # Factory untuk Analytics
+│   ├── CareerDevelopment/          # Factory untuk Career Development
+│   ├── DigitalLibrary/             # Factory untuk Digital Library
+│   ├── ELearning/                  # Factory untuk E-Learning
+│   ├── ERaport/                    # Factory untuk E-Raport
+│   ├── Monetization/               # Factory untuk Monetization
+│   ├── OnlineExam/                 # Factory untuk Online Exam
+│   ├── ParentPortal/               # Factory untuk Parent Portal
+│   ├── PPDB/                       # Factory untuk PPDB
+│   ├── SchoolManagement/           # Factory untuk School Management
+│   └── UserFactory.php
+├── migrations/
+└── seeders/
+    ├── AIAssistant/                # Seeder untuk AI Assistant
+    ├── Analytics/                  # Seeder untuk Analytics
+    ├── CareerDevelopment/          # Seeder untuk Career Development
+    ├── DigitalLibrary/             # Seeder untuk Digital Library
+    ├── ELearning/                  # Seeder untuk E-Learning
+    ├── ERaport/                    # Seeder untuk E-Raport
+    ├── Monetization/               # Seeder untuk Monetization
+    ├── OnlineExam/                 # Seeder untuk Online Exam
+    ├── ParentPortal/               # Seeder untuk Parent Portal
+    ├── PPDB/                       # Seeder untuk PPDB
+    ├── SchoolManagement/           # Seeder untuk School Management
+    └── DatabaseSeeder.php
+
+resources/views/
+├── admin/
+│   ├── includes/                   # File include untuk admin
+│   ├── layouts/                    # Layout admin
+│   ├── partials/                   # Partial views admin
+│   └── pages/
+│       ├── AIAssistant/            # View untuk AI Assistant
+│       ├── Analytics/              # View untuk Analytics
+│       ├── CareerDevelopment/      # View untuk Career Development
+│       ├── DigitalLibrary/         # View untuk Digital Library
+│       ├── ELearning/              # View untuk E-Learning
+│       ├── ERaport/                # View untuk E-Raport
+│       ├── Monetization/           # View untuk Monetization
+│       ├── OnlineExam/             # View untuk Online Exam
+│       ├── ParentPortal/           # View untuk Parent Portal
+│       ├── PPDB/                   # View untuk PPDB
+│       └── SchoolManagement/       # View untuk School Management
+└── home.blade.php                  # Homepage utama
+
+routes/
+├── api.php                         # API Routes
+├── channels.php                    # Broadcast Channels
+├── console.php                     # Artisan Commands
+└── web.php                         # Web Routes
+
+```
 ## Teknologi yang Digunakan
 
 ### Backend
