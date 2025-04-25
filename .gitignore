@@ -8,6 +8,7 @@
 /vendor
 /.phpintel
 .env
+Envoy.blade.php
 .DS_Store
 .phpunit*
 *.cache
