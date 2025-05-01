@@ -25,13 +25,15 @@
             <div class="col-lg-7 col-md-7 col-6">
                 <div class="header-right d-flex justify-content-end align-items-center">
                     <div class="theme-toggle-box ml-15">
-                        <button id="theme-toggle" class="border-0 bg-transparent p-2 rounded-circle" title="Toggle Dark Mode">
+                        <button id="theme-toggle" class="border-0 bg-transparent p-2 rounded-circle"
+                            title="Toggle Dark Mode">
                             <i class="lni lni-night" id="theme-icon"></i>
                             <span class="visually-hidden">Toggle Dark Mode</span>
                         </button>
                     </div>
                     <div class="language-box ml-15 d-none d-md-flex">
-                        <button class="dropdown-toggle bg-transparent border-0" type="button" id="language" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="dropdown-toggle bg-transparent border-0" type="button" id="language"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="lni lni-world"></i>
                             <span>{{ strtoupper(app()->getLocale()) }}</span>
                         </button>
@@ -42,10 +44,12 @@
                         </ul>
                     </div>
                     <div class="notification-box ml-15 d-none d-md-flex">
-                        <button class="dropdown-toggle position-relative" type="button" id="notification" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="dropdown-toggle position-relative" type="button" id="notification"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="lni lni-alarm"></i>
-                            @if($notificationsCount ?? 0 > 0)
-                                <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">{{ $notificationsCount ?? 0 }}</span>
+                            @if ($notificationsCount ?? 0 > 0)
+                                <span
+                                    class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">{{ $notificationsCount ?? 0 }}</span>
                             @endif
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification">
@@ -79,10 +83,12 @@
                         </ul>
                     </div>
                     <div class="header-message-box ml-15 d-none d-md-flex">
-                        <button class="dropdown-toggle position-relative" type="button" id="message" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="dropdown-toggle position-relative" type="button" id="message"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="lni lni-envelope"></i>
-                            @if($messagesCount ?? 0 > 0)
-                                <span class="badge bg-primary rounded-circle position-absolute top-0 start-100 translate-middle">{{ $messagesCount ?? 0 }}</span>
+                            @if ($messagesCount ?? 0 > 0)
+                                <span
+                                    class="badge bg-primary rounded-circle position-absolute top-0 start-100 translate-middle">{{ $messagesCount ?? 0 }}</span>
                             @endif
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="message">
@@ -107,10 +113,12 @@
                         </ul>
                     </div>
                     <div class="profile-box ml-15">
-                        <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="dropdown-toggle bg-transparent border-0" type="button" id="profile"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="profile-info d-flex align-items-center">
                                 <div class="image">
-                                    <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile" style="width: 40px; border-radius: 50%;">
+                                    <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile"
+                                        style="width: 40px; border-radius: 50%;">
                                 </div>
                                 <div class="info ms-2">
                                     <h6 class="fw-500">{{ Auth::user()->name ?? 'User' }}</h6>
@@ -122,25 +130,31 @@
                             <li>
                                 <div class="author-info d-flex align-items-center p-2">
                                     <div class="image">
-                                        <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile" style="width: 50px; border-radius: 50%;">
+                                        <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile"
+                                            style="width: 50px; border-radius: 50%;">
                                     </div>
                                     <div class="content ms-2">
                                         <h4 class="text-sm">{{ Auth::user()->name ?? 'User' }}</h4>
-                                        <a class="text-muted text-xs" href="#">{{ Auth::user()->email ?? 'email@example.com' }}</a>
+                                        <a class="text-muted text-xs"
+                                            href="#">{{ Auth::user()->email ?? 'email@example.com' }}</a>
                                     </div>
                                 </div>
                             </li>
                             <li class="divider"></li>
                             <li><a href="#"><i class="lni lni-user"></i> Lihat Profil</a></li>
-                            <li><a href="#"><i class="lni lni-robot"></i> AI Assistant <span class="badge bg-danger ms-2">PRO</span></a></li>
-                            <li><a href="#"><i class="lni lni-cart"></i> Marketplace Sekolah <span class="badge bg-warning ms-2">Income</span></a></li>
+                            <li><a href="#"><i class="lni lni-robot"></i> AI Assistant <span
+                                        class="badge bg-danger ms-2">PRO</span></a></li>
+                            <li><a href="#"><i class="lni lni-cart"></i> Marketplace Sekolah <span
+                                        class="badge bg-warning ms-2">Income</span></a></li>
                             <li><a href="#"><i class="lni lni-cog"></i> Pengaturan</a></li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <a href="#"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i class="lni lni-exit"></i> Keluar
                                 </a>
-                                <form id="logout-form" action="#" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    style="display: none;">
                                     @csrf
                                 </form>
                             </li>

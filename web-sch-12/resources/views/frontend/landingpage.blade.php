@@ -38,7 +38,7 @@
                     @else
                         <!-- Jika belum login -->
                         <li class="nav-item ms-lg-3">
-                            <a class="btn btn-outline-primary me-2" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-outline-primary me-2 mb-2" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png"
+                    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
                         alt="Dashboard Preview" class="img-fluid floating d-none d-lg-block">
                 </div>
             </div>
@@ -167,8 +167,9 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="dashboard-img">
-                        <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png"
-                            alt="Dashboard Preview" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
+                            alt="Dashboard Preview" class="img-fluid floating d-none d-lg-block">
+
                     </div>
                 </div>
             </div>
