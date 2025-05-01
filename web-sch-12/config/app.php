@@ -71,6 +71,7 @@ return [
         Modules\SPP\app\Providers\SPPServiceProvider::class,
         Modules\AiLearning\app\Providers\AiLearningServiceProvider::class,
         Modules\Career\app\Providers\CareerServiceProvider::class,
+        Modules\PortalOrangTua\app\Providers\PortalOrangTuaServiceProvider::class,
 
     ])->toArray(),
 
