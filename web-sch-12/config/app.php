@@ -72,6 +72,8 @@ return [
         Modules\AiLearning\app\Providers\AiLearningServiceProvider::class,
         Modules\Career\app\Providers\CareerServiceProvider::class,
         Modules\PortalOrangTua\app\Providers\PortalOrangTuaServiceProvider::class,
+        Modules\SistemMonetisasi\app\Providers\SistemMonetisasiServiceProvider::class,
+        Modules\LaporanAnalitik\app\Providers\LaporanAnalitikServiceProvider::class,
 
     ])->toArray(),
 
