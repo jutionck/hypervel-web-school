@@ -70,6 +70,7 @@ return [
         Modules\UjianOnline\app\Providers\UjianOnlineServiceProvider::class,
         Modules\SPP\app\Providers\SPPServiceProvider::class,
         Modules\AiLearning\app\Providers\AiLearningServiceProvider::class,
+        Modules\Career\app\Providers\CareerServiceProvider::class,
 
     ])->toArray(),
 
