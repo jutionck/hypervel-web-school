@@ -64,7 +64,7 @@ return [
         Modules\ERaport\app\Providers\ERaportServiceProvider::class,
         Modules\ELearning\app\Providers\ELearningServiceProvider::class,
         // Modules\Murid\App\Providers\MuridServiceProvider::class,
-        // Modules\Perpustakaan\App\Providers\PerpustakaanServiceProvider::class,
+        Modules\Perpustakaan\app\Providers\PerpustakaanServiceProvider::class,
         Modules\PPDB\app\Providers\PPDBServiceProvider::class,
         Modules\ManajemenSekolah\app\Providers\ManajemenSekolahServiceProvider::class,
         // Modules\SPP\App\Providers\SPPServiceProvider::class,
