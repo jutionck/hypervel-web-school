@@ -67,6 +67,7 @@ return [
         Modules\Perpustakaan\app\Providers\PerpustakaanServiceProvider::class,
         Modules\PPDB\app\Providers\PPDBServiceProvider::class,
         Modules\ManajemenSekolah\app\Providers\ManajemenSekolahServiceProvider::class,
+        Modules\UjianOnline\app\Providers\UjianOnlineServiceProvider::class,
         // Modules\SPP\App\Providers\SPPServiceProvider::class,
 
     ])->toArray(),
