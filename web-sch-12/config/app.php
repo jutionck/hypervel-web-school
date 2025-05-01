@@ -66,6 +66,7 @@ return [
         // Modules\Murid\App\Providers\MuridServiceProvider::class,
         // Modules\Perpustakaan\App\Providers\PerpustakaanServiceProvider::class,
         Modules\PPDB\app\Providers\PPDBServiceProvider::class,
+        Modules\ManajemenSekolah\app\Providers\ManajemenSekolahServiceProvider::class,
         // Modules\SPP\App\Providers\SPPServiceProvider::class,
 
     ])->toArray(),
