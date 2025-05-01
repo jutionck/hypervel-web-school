@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduSphere - Sistem Manajemen Sekolah Futuristik</title>
     @include('frontend.includes.styles')
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
@@ -28,9 +30,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#pricing">Harga</a>
                     </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="#contact">Demo Gratis</a>
-                    </li>
+                    @auth
+                        <!-- Jika sudah login -->
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-primary" href="{{ route('home') }}">Home</a>
+                        </li>
+                    @else
+                        <!-- Jika belum login -->
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-primary me-2" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @endauth
                 </ul>
             </div>
         </div>
@@ -42,14 +55,16 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1>Revolusi Sistem Manajemen Sekolah dengan Teknologi AI</h1>
-                    <p>Platform all-in-one untuk mengelola seluruh operasional sekolah dengan efisien, modern, dan berorientasi masa depan.</p>
+                    <p>Platform all-in-one untuk mengelola seluruh operasional sekolah dengan efisien, modern, dan
+                        berorientasi masa depan.</p>
                     <div class="hero-btns d-flex">
                         <a href="#pricing" class="btn btn-primary">Mulai Sekarang</a>
                         <a href="#features" class="btn btn-outline-light">Pelajari Fitur</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png" alt="Dashboard Preview" class="img-fluid floating d-none d-lg-block">
+                    <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png"
+                        alt="Dashboard Preview" class="img-fluid floating d-none d-lg-block">
                 </div>
             </div>
         </div>
@@ -60,9 +75,10 @@
         <div class="container">
             <div class="section-title">
                 <h2>Fitur Unggulan EduSphere</h2>
-                <p>Solusi lengkap untuk transformasi digital sekolah Anda dengan teknologi terkini dan antarmuka yang intuitif.</p>
+                <p>Solusi lengkap untuk transformasi digital sekolah Anda dengan teknologi terkini dan antarmuka yang
+                    intuitif.</p>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
@@ -70,30 +86,33 @@
                             <i class="lni lni-dashboard"></i>
                         </div>
                         <h3>Dashboard Cerdas</h3>
-                        <p>Analisis data real-time dengan visualisasi interaktif untuk pengambilan keputusan berbasis data.</p>
+                        <p>Analisis data real-time dengan visualisasi interaktif untuk pengambilan keputusan berbasis
+                            data.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="lni lni-school"></i>
                         </div>
                         <h3>Manajemen Sekolah</h3>
-                        <p>Kelola siswa, guru, kelas, jadwal, dan inventaris sekolah dalam satu platform terintegrasi.</p>
+                        <p>Kelola siswa, guru, kelas, jadwal, dan inventaris sekolah dalam satu platform terintegrasi.
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
                         <div class="feature-icon">
                             <i class="lni lni-book"></i>
                         </div>
                         <h3>E-Learning Modern</h3>
-                        <p>Sistem pembelajaran online dengan kelas virtual, materi interaktif, dan sistem penilaian otomatis.</p>
+                        <p>Sistem pembelajaran online dengan kelas virtual, materi interaktif, dan sistem penilaian
+                            otomatis.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
                         <div class="feature-icon">
@@ -103,7 +122,7 @@
                         <p>Generate raport otomatis dengan analisis kompetensi dan prediksi kelulusan berbasis AI.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
                         <div class="feature-icon">
@@ -113,7 +132,7 @@
                         <p>Asisten virtual untuk pembuatan materi otomatis dan penilaian esai cerdas.</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="feature-card">
                         <div class="feature-icon">
@@ -133,17 +152,23 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <h2>Antarmuka Modern & Intuitif</h2>
-                    <p class="mb-4">Dashboard yang dirancang khusus untuk kemudahan penggunaan dengan pengalaman pengguna yang optimal.</p>
+                    <p class="mb-4">Dashboard yang dirancang khusus untuk kemudahan penggunaan dengan pengalaman
+                        pengguna yang optimal.</p>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Desain responsif untuk semua perangkat</li>
-                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Navigasi sederhana dengan akses cepat</li>
-                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Customizable sesuai kebutuhan sekolah</li>
-                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Dark mode untuk kenyamanan mata</li>
+                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Desain responsif
+                            untuk semua perangkat</li>
+                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Navigasi sederhana
+                            dengan akses cepat</li>
+                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Customizable
+                            sesuai kebutuhan sekolah</li>
+                        <li class="mb-3"><i class="lni lni-checkmark-circle text-primary me-2"></i> Dark mode untuk
+                            kenyamanan mata</li>
                     </ul>
                 </div>
                 <div class="col-lg-7">
                     <div class="dashboard-img">
-                        <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png" alt="Dashboard Preview" class="img-fluid">
+                        <img src="https://cdn.dribbble.com/users/1126935/screenshots/15099253/media/4d3b0a7c5f8a1a1a5e4e1d5b5b5b5b5.png"
+                            alt="Dashboard Preview" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -157,44 +182,50 @@
                 <h2>Apa Kata Mereka</h2>
                 <p>Testimoni dari sekolah-sekolah yang telah mengalami transformasi digital dengan EduSphere.</p>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Testimonial" class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Testimonial"
+                                class="testimonial-avatar">
                             <div class="testimonial-author">
                                 <h5>Dr. Ani Wijaya</h5>
                                 <p>Kepala Sekolah SMA Futura</p>
                             </div>
                         </div>
-                        <p class="testimonial-quote">"Sejak menggunakan EduSphere, efisiensi administrasi sekolah kami meningkat 70%. Sistem yang sangat membantu untuk manajemen modern."</p>
+                        <p class="testimonial-quote">"Sejak menggunakan EduSphere, efisiensi administrasi sekolah kami
+                            meningkat 70%. Sistem yang sangat membantu untuk manajemen modern."</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial" class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Testimonial"
+                                class="testimonial-avatar">
                             <div class="testimonial-author">
                                 <h5>Budi Santoso</h5>
                                 <p>Guru Matematika SMP Cendekia</p>
                             </div>
                         </div>
-                        <p class="testimonial-quote">"Fitur E-Learning-nya sangat membantu terutama untuk pembuatan materi dan penilaian otomatis. Menghemat banyak waktu saya."</p>
+                        <p class="testimonial-quote">"Fitur E-Learning-nya sangat membantu terutama untuk pembuatan
+                            materi dan penilaian otomatis. Menghemat banyak waktu saya."</p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4 col-md-6">
                     <div class="testimonial-card">
                         <div class="testimonial-header">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial" class="testimonial-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial"
+                                class="testimonial-avatar">
                             <div class="testimonial-author">
                                 <h5>Siti Rahmawati</h5>
                                 <p>Orang Tua Siswa SD Mentari</p>
                             </div>
                         </div>
-                        <p class="testimonial-quote">"Portal orang tua memudahkan saya memantau perkembangan anak dan berkomunikasi dengan guru tanpa harus datang ke sekolah."</p>
+                        <p class="testimonial-quote">"Portal orang tua memudahkan saya memantau perkembangan anak dan
+                            berkomunikasi dengan guru tanpa harus datang ke sekolah."</p>
                     </div>
                 </div>
             </div>
@@ -206,9 +237,10 @@
         <div class="container">
             <div class="section-title">
                 <h2>Paket Harga</h2>
-                <p>Pilih paket yang sesuai dengan kebutuhan sekolah Anda. Semua paket termasuk update dan support 24/7.</p>
+                <p>Pilih paket yang sesuai dengan kebutuhan sekolah Anda. Semua paket termasuk update dan support 24/7.
+                </p>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-4">
                     <div class="pricing-card">
@@ -225,7 +257,7 @@
                         <a href="#" class="btn btn-outline-primary w-100">Mulai Sekarang</a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4">
                     <div class="pricing-card popular">
                         <div class="popular-badge">POPULAR</div>
@@ -242,7 +274,7 @@
                         <a href="#" class="btn btn-primary w-100">Mulai Sekarang</a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-4">
                     <div class="pricing-card">
                         <h3>Enterprise</h3>
@@ -266,7 +298,8 @@
     <section class="cta">
         <div class="container">
             <h2>Siap Transformasi Sekolah Anda?</h2>
-            <p>Jadwalkan demo gratis sekarang dan lihat bagaimana EduSphere dapat merevolusi manajemen sekolah Anda dalam hitungan menit.</p>
+            <p>Jadwalkan demo gratis sekarang dan lihat bagaimana EduSphere dapat merevolusi manajemen sekolah Anda
+                dalam hitungan menit.</p>
             <a href="#" class="btn btn-light btn-lg me-2">Jadwalkan Demo</a>
             <a href="#" class="btn btn-outline-light btn-lg">Hubungi Sales</a>
         </div>
@@ -279,4 +312,5 @@
     @include('frontend.includes.scripts')
 
 </body>
+
 </html>
