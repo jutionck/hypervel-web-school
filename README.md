@@ -2,7 +2,7 @@
 
 ![Admin CMS](public/backend/images/admin-cms.png)
 
-![Landing page](public/backend/images/landingpage.png)
+![landingpage](https://github.com/user-attachments/assets/7b7b1029-03ba-48f6-8e17-34e4722047c1)
 
 ## Tentang Aplikasi
 
