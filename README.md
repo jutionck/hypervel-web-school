@@ -2,6 +2,8 @@
 
 ![Admin CMS](public/backend/images/admin-cms.png)
 
+![Landing page](public/backend/images/landingpage.png)
+
 ## Tentang Aplikasi
 
 Hyper Web School adalah platform manajemen sekolah berbasis web dengan fitur lengkap untuk administrasi, pembelajaran, dan operasional sekolah modern.
