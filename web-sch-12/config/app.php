@@ -65,7 +65,7 @@ return [
         Modules\ELearning\app\Providers\ELearningServiceProvider::class,
         // Modules\Murid\App\Providers\MuridServiceProvider::class,
         // Modules\Perpustakaan\App\Providers\PerpustakaanServiceProvider::class,
-        // Modules\PPDB\App\Providers\PPDBServiceProvider::class,
+        Modules\PPDB\app\Providers\PPDBServiceProvider::class,
         // Modules\SPP\App\Providers\SPPServiceProvider::class,
 
     ])->toArray(),
