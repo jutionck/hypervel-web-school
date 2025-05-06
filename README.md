@@ -49,6 +49,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+- Referensi Docker untuk hypervel: [hypervel-base-docker-app](https://github.com/ugunNet21/hypervel-base-docker-app)
 
 ### Backlog Pengembangan Sidebar Navigation
 
