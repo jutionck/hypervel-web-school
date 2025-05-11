@@ -117,7 +117,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="profile-info d-flex align-items-center">
                                 <div class="image">
-                                    <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile"
+                                    <img src="{{ asset('backend/assets/images/profile/profile-image.png') }}" alt="Profile"
                                         style="width: 40px; border-radius: 50%;">
                                 </div>
                                 <div class="info ms-2">
@@ -130,7 +130,7 @@
                             <li>
                                 <div class="author-info d-flex align-items-center p-2">
                                     <div class="image">
-                                        <img src="{{ asset('images/profile/profile-image.png') }}" alt="Profile"
+                                        <img src="{{ asset('backend/assets/images/profile/profile-image.png') }}" alt="Profile"
                                             style="width: 50px; border-radius: 50%;">
                                     </div>
                                     <div class="content ms-2">
