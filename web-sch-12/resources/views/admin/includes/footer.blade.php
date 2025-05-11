@@ -5,8 +5,8 @@
                 <div class="copyright text-center text-md-start">
                     <p class="text-sm">
                         Designed and Developed by
-                        <a href="https://plainadmin.com" rel="nofollow" target="_blank">
-                            PlainAdmin
+                        <a href="https://web-giatechindo.vercel.app/" rel="nofollow" target="_blank">
+                            Team Dev Giatechindo
                         </a>
                     </p>
                 </div>
