@@ -7,6 +7,8 @@
 <script src="{{ asset('backend/assets/js/world-merc.js') }}"></script>
 <script src="{{ asset('backend/assets/js/polyfill.js') }}"></script>
 <script src="{{ asset('backend/assets/js/main.js') }}"></script>
+<!--alert session-->
+<script src="{{ asset('backend/assets/js/alert-session.js') }}"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
