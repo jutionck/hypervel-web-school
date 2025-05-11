@@ -6,10 +6,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="backend/assets/images/favicon.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.svg') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('backend/assets/css/font-awesome.6.4.0.min.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')</title>
+    <title>Dashboard | @yield('title', 'Dashboard')</title>
 
     <!-- ========== All CSS files linkup ========= -->
     @include('admin.includes.styles')
@@ -28,8 +28,8 @@
     <!-- ======== sidebar-nav start =========== -->
     <aside class="sidebar-nav-wrapper">
         <div class="navbar-logo">
-            <a href="index.html">
-                <img src="backend/assets/images/logo/logo.svg" alt="logo" />
+            <a href="{{ route('home') }}">
+                <img src="{{ asset('backend/assets/images/logo/logo.svg') }}" alt="logo" />
             </a>
         </div>
         @include('admin.includes.sidebar')

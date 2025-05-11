@@ -60,7 +60,7 @@
                             <p class="text-sm mb-25">
                                 Please enter your credentials to access your account.
                             </p>
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('login.session') }}">
                                 @csrf
 
                                 <div class="row">
