@@ -11,27 +11,27 @@ class AuthLoginCustomController extends Controller
 {
     public function showLoginForm()
     {
-        return view('auth.login'); // Gunakan view login yang sama
+        return view('auth.login'); 
     }
 
     public function login(Request $request)
     {
         $request->validate([
-            'email'    => 'required|email', // Atau 'username'
+            'email'    => 'required|email', 
             'password' => 'required',
             'remember' => 'nullable|boolean',
         ]);
 
-        $user = User::where('email', $request->email)->first(); // Atau 'username'
+        $user = User::where('email', $request->email)->first(); 
 
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user, $request->remember);
             // dd(Auth::user());
-            return redirect()->intended(route('home')); // Sesuaikan dengan route Anda
+            return redirect()->intended(route('home')); 
         }
 
         return back()->withErrors([
-            'email' => 'These credentials do not match our records.', // Sesuaikan pesan error
+            'email' => 'These credentials do not match our records.', 
         ])->onlyInput('email');
     }
 
