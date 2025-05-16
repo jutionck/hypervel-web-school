@@ -200,20 +200,31 @@
         </li>
 
         <!-- Administrasi -->
-        <li class="nav-item nav-item-has-children {{ request()->routeIs('users.*') ? 'show' : '' }}">
-            <a href="#0" class="{{ request()->routeIs('users.*') ? '' : 'collapsed' }}"
+        <li class="nav-item nav-item-has-children {{ request()->routeIs('users.*', 'permissions.*') ? 'show' : '' }}">
+            <a href="#0" class="{{ request()->routeIs('users.*', 'permissions.*') ? '' : 'collapsed' }}"
                 data-bs-toggle="collapse" data-bs-target="#ddmenu_13" aria-controls="ddmenu_13"
-                aria-expanded="{{ request()->routeIs('users.*') ? 'true' : 'false' }}" aria-label="Toggle navigation">
+                aria-expanded="{{ request()->routeIs('users.*', 'permissions.*') ? 'true' : 'false' }}"
+                aria-label="Toggle navigation">
                 <span class="icon"><i class="lni lni-cog"></i></span>
                 <span class="text">Administrasi</span>
             </a>
-            <ul id="ddmenu_13" class="collapse dropdown-nav {{ request()->routeIs('users.*') ? 'show' : '' }}">
+            <ul id="ddmenu_13"
+                class="collapse dropdown-nav {{ request()->routeIs('users.*', 'permissions.*') ? 'show' : '' }}">
                 <li><a href="#">Pengaturan Sistem</a></li>
+
                 <li>
                     <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.*') ? 'active' : '' }}">
                         Manajemen User
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{ route('permissions.index') }}"
+                        class="{{ request()->routeIs('permissions.*') ? 'active' : '' }}">
+                        Manajemen Permission
+                    </a>
+                </li>
+
                 <li><a href="#">Template Landing Page</a></li>
                 <li><a href="#">Integrasi API</a></li>
                 <li><a href="#">Backup Data</a></li>
