@@ -14,6 +14,8 @@
     <!-- ========== All CSS files linkup ========= -->
     @include('admin.includes.styles')
     <!-- ========== All CSS files linkup ========= -->
+    @stack('styles')
+
 </head>
 
 <body>
@@ -59,6 +61,8 @@
     <!-- ========== admin common script ========== -->
     <script src="{{ asset('backend/assets/js/admin-common.js') }}"></script>
     <!-- ========== admin common script ========== -->
+
+    @stack('scripts')
 
 </body>
 

@@ -10,6 +10,9 @@
 <!--alert session-->
 <script src="{{ asset('backend/assets/js/alert-session.js') }}"></script>
 
+<!--data table responsive-->
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
