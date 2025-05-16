@@ -180,4 +180,9 @@ class UserController extends Controller
                 ->withErrors(['error' => 'Failed to delete user.']);
         }
     }
+    public function list()
+    {
+        return User::select(['id', 'name', 'email'])->get();
+    }
+    
 }

@@ -21,6 +21,13 @@ Route::middleware(['auth'])->prefix('home')->group(function () {
     Route::get('/users/data', [UserController::class, 'index'])->name('users.data');
     Route::resource('users', UserController::class)->except(['index']);
 
+    // Permissions
+    Route::resource('permissions', App\Http\Controllers\admin\PermissionController::class);
+    Route::post('permissions/{permission}/assign', [App\Http\Controllers\admin\PermissionController::class, 'assignToUser'])->name('permissions.assign');
+    Route::post('permissions/{permission}/revoke', [App\Http\Controllers\admin\PermissionController::class, 'revokeFromUser'])->name('permissions.revoke');
+    Route::post('permissions/{permission}/assign-role', [App\Http\Controllers\admin\PermissionController::class, 'assignToRole'])->name('permissions.assignRole');
+    Route::post('permissions/{permission}/revoke-role', [App\Http\Controllers\admin\PermissionController::class, 'revokeFromRole'])->name('permissions.revokeRole');
+    Route::get('/datatable', [App\Http\Controllers\admin\PermissionController::class, 'datatable'])->name('permissions.datatable');
 });
 Auth::routes();
 
