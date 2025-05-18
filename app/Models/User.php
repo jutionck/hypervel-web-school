@@ -29,15 +29,17 @@ use App\Models\SchoolManagement\Staff;
 use App\Models\SchoolManagement\Student;
 use App\Models\SchoolManagement\Teacher;
 use Hypervel\Foundation\Auth\User as Authenticatable;
+use App\Traits\UsesUuid;
 
 class User extends Authenticatable
 {
+    use UsesUuid;
 
-    protected $primaryKey = 'id';
-    protected $keyType    = 'string';
-    public $incrementing  = false;
+    protected string $primaryKey = 'id'; // ✅ ubah dari ?string ke string
+    protected string $keyType = 'string';
+    public bool $incrementing = false;
 
-    protected $fillable = [
+    protected array $fillable = [
         'name',
         'username',
         'email',
@@ -46,10 +48,33 @@ class User extends Authenticatable
         'phone',
         'avatar_url',
         'is_active',
-        'last_login',
+        'last_login_time',
         'remember_token',
         'email_verified_at',
     ];
+
+    /**
+     * Assign a role to the user.
+     */
+    public function assignRole(string $roleName): void
+    {
+        $role = Role::where('name', $roleName)->firstOrFail();
+        $role->assignTo($this);
+    }
+
+    /**
+     * Sync roles (remove existing roles and assign new ones).
+     */
+    public function syncRoles(array $roleNames): void
+    {
+        ModelHasRole::where('model_type', self::class)
+            ->where('model_id', $this->id)
+            ->delete();
+
+        foreach ($roleNames as $roleName) {
+            $this->assignRole($roleName);
+        }
+    }
 
     // Relationships
     public function parent()

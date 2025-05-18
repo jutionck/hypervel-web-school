@@ -1,20 +1,19 @@
 <?php
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace App\Models;
 
-use App\Models\Model;
+use Hyperf\Database\Model\Model;
 
 class ModelHasRole extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     */
-    protected array $fillable = [];
+    protected array $fillable = [
+        'role_id',
+        'model_type',
+        'model_id',
+    ];
 
-    /**
-     * The attributes that should be cast to native types.
-     */
     protected array $casts = [];
+    // public $timestamps = false;
 }

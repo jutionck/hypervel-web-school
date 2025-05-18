@@ -1,28 +1,43 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Models;
 
-use App\Models\Model;
+use Hyperf\Database\Model\Model;
 
 class Permission extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     */
+    protected string $primaryKey = 'id'; // ✅ ubah dari ?string ke string
+    protected string $keyType = 'string';
+    public bool $incrementing = false;
 
-    protected $primaryKey = 'id';
-    protected $keyType    = 'string';
-    public $incrementing  = false;
-
-    protected $fillable = [
+    protected array $fillable = [
         'name',
         'guard_name',
     ];
 
-    protected $casts = [
+    protected array $casts = [
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
+
+    /**
+     * Get the roles associated with the permission.
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_has_permissions', 'permission_id', 'role_id');
+    }
+
+    /**
+     * Assign this permission to a role.
+     */
+    public function assignToRole(Role $role): void
+    {
+        RoleHasPermission::create([
+            'permission_id' => $this->id,
+            'role_id'       => $role->id,
+        ]);
+    }
 }
