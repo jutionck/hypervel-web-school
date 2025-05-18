@@ -22,7 +22,10 @@ return new class extends Migration {
             $table->string('phone', 20)->nullable();
             $table->string('avatar_url', 255)->nullable();
             $table->boolean('is_active')->default(true);
-            $table->timestamp('last_login')->nullable();
+            $table->timestamp('last_login_time')->nullable();
+            $table->string('last_login_ip', 50)->nullable();
+            $table->string('slug', 100)->nullable();
+            $table->string('key_status', 50)->nullable();
             $table->string('remember_token', 100)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();

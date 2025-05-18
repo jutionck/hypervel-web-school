@@ -61,6 +61,7 @@ return new class extends Migration
             $table->primary(['role_id', 'model_id', 'model_type']);
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->index(['model_type', 'model_id'], 'idx_model_has_roles_model');
+            $table->datetimes();
         });
 
         // Model Has Permissions table
