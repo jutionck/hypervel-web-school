@@ -370,6 +370,26 @@ Available commands for the "make" namespace:
 
 ```
 
+# Create base table like spatie
+
+```php
+php artisan make:model Role -m
+# → Migration: 2025_05_17_154027_create_roles_table
+
+php artisan make:model Permission -m
+# → Migration: 2025_05_17_154203_create_permissions_table
+
+php artisan make:model ModelHasRole -m
+# → Migration: 2025_05_17_154248_create_model_has_roles_table
+
+php artisan make:model ModelHasPermission -m
+# → Migration: 2025_05_17_154400_create_model_has_permissions_table
+
+php artisan make:model RoleHasPermission -m
+# → Migration: 2025_05_17_154437_create_role_has_permissions_table
+
+```
+
 
 > See [this issue](https://github.com/laravel/octane/issues/765) for more discussions.
 
